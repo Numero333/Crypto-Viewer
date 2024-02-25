@@ -43,7 +43,7 @@ struct APIPath {
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
-    case put = "UPDATE"
+    case put = "PUT"
     case patch = "PATCH"
     case delete = "DELETE"
 }

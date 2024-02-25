@@ -12,20 +12,19 @@ struct ContentView: View {
     @ObservedObject var model = MainViewModel()
     @State private var showAlert = false
     
+    private var isLoading: Bool {
+        return model.token.isEmpty
+    }
+    
     var body: some View {
         VStack {
+            
             Text("Crypto Viewer")
                 .font(.title)
                 .bold()
-            if model.token.isEmpty {
-                Spacer()
-                Text("Fetching data ...")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .padding(.bottom)
-                ProgressView()
-                Spacer()
+            
+            if isLoading {
+                LoadingView()
             } else {
                 List {
                     ForEach(model.token) { token in
@@ -74,7 +73,7 @@ struct TokenRowView: View {
         HStack(alignment: .center) {
             
             // Token Rank
-            Text(token.market_cap_rank.description)
+            Text(token.marketCapRank.description)
             
             // Token Image
             AsyncImage(url: token.imageUrl) { image in
@@ -95,7 +94,7 @@ struct TokenRowView: View {
                 Text(token.symbol.uppercased())
                     .font(.caption)
             }
-
+            
             Spacer()
             
             // Token price info
@@ -114,5 +113,18 @@ struct TokenRowView: View {
             }
             .padding(.trailing, 5)
         }
+    }
+}
+
+struct LoadingView: View {
+    var body: some View {
+        Spacer()
+        Text("Fetching data ...")
+            .font(.title2)
+            .fontWeight(.semibold)
+            .fontDesign(.rounded)
+            .padding(.bottom)
+        ProgressView()
+        Spacer()
     }
 }

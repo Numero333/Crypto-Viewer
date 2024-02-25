@@ -12,38 +12,45 @@ struct TokenModel: Codable, Identifiable {
     let symbol: String
     let name: String
     let image: String
-    let current_price: Double
-    let market_cap: Double
-    let market_cap_rank: Int
-    let total_volume: Double
-    let high_24h: Double
-    let low_24h: Double
-    let price_change_24h: Double
-    let price_change_percentage_24h: Double
+    let currentPrice: Double
+    let marketCapRank: Int
+    let high24hPrice: Double
+    let low24hPrice: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case symbol
+        case name
+        case image
+        case currentPrice = "current_price"
+        case marketCapRank = "market_cap_rank"
+        case high24hPrice = "high_24h"
+        case low24hPrice = "low_24h"
+    }
     
     var imageUrl: URL? {
         return URL(string: image)
     }
     
     var currentPriceFormatted: String {
-        return current_price.formattedWithTwoDecimals
+        return currentPrice.asStringWithTwoDecimals
     }
     
     var highPriceFormatted: String {
-        return high_24h.formattedWithTwoDecimals
+        return high24hPrice.asStringWithTwoDecimals
     }
     
     var lowPriceFormatted: String {
-        return low_24h.formattedWithTwoDecimals
+        return low24hPrice.asStringWithTwoDecimals
     }
 }
 
 extension TokenModel {
-    static var mockToken = TokenModel(id: "001", symbol: "btc", name: "Bitcoin", image: "", current_price: 40000, market_cap: 680000, market_cap_rank: 1, total_volume: 200000, high_24h: 41000, low_24h: 39000, price_change_24h: 10, price_change_percentage_24h: 10)
+    static var mockToken = TokenModel(id: "001", symbol: "btc", name: "Bitcoin", image: "", currentPrice: 40000, marketCapRank: 1, high24hPrice: 41000, low24hPrice: 39000)
 }
 
 extension Double {
-    var formattedWithTwoDecimals: String {
+    var asStringWithTwoDecimals: String {
         let formatter = NumberFormatter()
                 formatter.minimumFractionDigits = 0
                 formatter.maximumFractionDigits = 2
