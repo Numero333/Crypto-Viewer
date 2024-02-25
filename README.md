@@ -37,4 +37,4 @@ To test **Crypto-Viewer**, follow these steps:
 
 ## Contribution
 
-Contributions to **Crypto-Viewer** are always welcome. Whether it's bug fixes, feature enhancements, or suggestions, feel free to open an issue or a pull request.
+Contributions to **Crypto-Viewer** are always welcome. Whether it's bug fixes, feature enhancements, or suggestions.
