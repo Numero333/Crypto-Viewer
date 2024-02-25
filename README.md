@@ -2,39 +2,39 @@
 
 ## Introduction
 
-**Crypto-Viewer** est un Proof of Concept (POC) développé en utilisant Swift et SwiftUI, conçu pour afficher en temps réel les cours des cryptomonnaies grâce à l'API de CoinGecko. Ce projet adopte une architecture MVVM, assurant une séparation claire entre la logique métier et l'interface utilisateur, tout en mettant en évidence une couche networking réutilisable et efficace.
+**Crypto-Viewer** is a Proof of Concept (POC) developed using Swift and SwiftUI, designed to display real-time cryptocurrency prices using the CoinGecko API. This project adopts an MVVM architecture, ensuring a clear separation between business logic and user interface, while highlighting a reusable and efficient networking layer.
 
-## Objectifs
+## Objectives
 
-Le but principal de **Crypto-Viewer** était de concevoir et d'implémenter un système de call API avec pagination en utilisant SwiftUI. Ce projet met l'accent sur :
+The main goal of **Crypto-Viewer** was to design and implement an API call system with pagination using SwiftUI. This project emphasizes:
 
-- La mise en œuvre d'une architecture MVVM pour une meilleure maintenabilité et évolutivité.
-- La création d'une couche networking réutilisable et adaptable pour différents besoins.
-- L'utilisation efficace de la pagination pour optimiser les performances et l'expérience utilisateur lors de l'affichage des données de cryptomonnaie.
+- The implementation of an MVVM architecture for better maintainability and scalability.
+- The creation of a reusable and adaptable networking layer for different needs.
+- The efficient use of pagination to optimize performance and user experience when displaying cryptocurrency data.
 
-## Caractéristiques
+## Features
 
-- **Affichage des cours de cryptomonnaies en temps réel :** Utilise l'API CoinGecko pour récupérer et afficher les informations les plus récentes sur les cryptomonnaies.
-- **Architecture MVVM :** Permet une séparation claire des responsabilités et facilite les tests et la maintenance.
-- **Couche networking réutilisable :** Conçue pour être efficace et facile à adapter pour d'autres projets ou API.
-- **Pagination :** Implémentation de la pagination pour une gestion optimisée des données et une expérience utilisateur améliorée.
+- **Real-time cryptocurrency price display:** Uses the CoinGecko API to retrieve and display the most recent information on cryptocurrencies.
+- **MVVM Architecture:** Allows for a clear separation of responsibilities and facilitates testing and maintenance.
+- **Reusable networking layer:** Designed to be efficient and easy to adapt for other projects or APIs.
+- **Pagination:** Implementation of pagination for optimized data management and improved user experience.
 
 ## Technologies
 
-- **Langage :** Swift
-- **Framework :** SwiftUI
-- **Architecture :** MVVM
-- **API :** CoinGecko
+- **Language:** Swift
+- **Framework:** SwiftUI
+- **Architecture:** MVVM
+- **API:** CoinGecko
 
 ## Installation
 
-Pour tester **Crypto-Viewer**, suivez ces étapes :
+To test **Crypto-Viewer**, follow these steps:
 
-1. Clonez le repository sur votre machine locale.
-2. Ouvrez le projet dans Xcode.
-3. Assurez-vous que vous avez la dernière version de Xcode et Swift installées.
-4. Exécutez l'application dans un simulateur iOS ou sur un appareil réel.
+1. Clone the repository to your local machine.
+2. Open the project in Xcode.
+3. Make sure you have the latest version of Xcode and Swift installed.
+4. Run the application on an iOS simulator or a real device.
 
 ## Contribution
 
-Les contributions à **Crypto-Viewer** sont toujours les bienvenues. Que ce soit pour des corrections de bugs, des améliorations de fonctionnalités ou des suggestions, n'hésitez pas à ouvrir une issue ou une pull request.
+Contributions to **Crypto-Viewer** are always welcome. Whether it's bug fixes, feature enhancements, or suggestions, feel free to open an issue or a pull request.
