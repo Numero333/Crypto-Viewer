@@ -1,3 +1,6 @@
+
+![Simulator Screen Recording - iPhone 15 Pro - 2024-02-25 at 22 23 05](https://github.com/Numero333/Crypto-Viewer/assets/80432096/98b3d3cf-0259-4e1e-8421-f597d337082f)
+
 # Crypto-Viewer
 
 ## Introduction
